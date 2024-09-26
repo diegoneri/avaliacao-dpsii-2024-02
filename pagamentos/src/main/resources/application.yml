@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: pagamentos
+server:
+    servlet: 
+        contextPath: /api
+    port: 8091 
