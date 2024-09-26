@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: controleestoque
+server:
+    servlet: 
+        contextPath: /api
+    port: 8090 
