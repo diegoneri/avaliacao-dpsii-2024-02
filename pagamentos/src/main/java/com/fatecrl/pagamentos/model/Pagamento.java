@@ -1,13 +1,13 @@
 package com.fatecrl.pagamentos.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Pagamento {
     private Long id;
     private Double valor;
     private String formaPagamento;
     private String status;
-    private Date dataPagamento;
+    private LocalDate dataPagamento;
     private Integer idUsuario;
 
     public Pagamento() {
@@ -41,10 +41,10 @@ public class Pagamento {
     public void setStatus(String status) {
         this.status = status;
     }
-    public Date getDataPagamento() {
+    public LocalDate getDataPagamento() {
         return dataPagamento;
     }
-    public void setDataPagamento(Date dataPagamento) {
+    public void setDataPagamento(LocalDate dataPagamento) {
         this.dataPagamento = dataPagamento;
     }
     public Integer getIdUsuario() {

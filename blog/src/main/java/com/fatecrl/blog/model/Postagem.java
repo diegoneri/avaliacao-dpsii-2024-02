@@ -1,13 +1,13 @@
 package com.fatecrl.blog.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Postagem {
     private Long id;
     private String titulo;
     private String conteudo;
     private String autor;
-    private Date dataPublicacao;
+    private LocalDate dataPublicacao;
 
     public Postagem() {
     
@@ -41,10 +41,10 @@ public class Postagem {
     public void setAutor(String autor) {
         this.autor = autor;
     }
-    public Date getDataPublicacao() {
+    public LocalDate getDataPublicacao() {
         return dataPublicacao;
     }
-    public void setDataPublicacao(Date dataPublicacao) {
+    public void setDataPublicacao(LocalDate dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
     @Override

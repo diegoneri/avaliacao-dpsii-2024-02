@@ -4,7 +4,7 @@ import com.fatecrl.pagamentos.model.Pagamento;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -18,7 +18,7 @@ public class PagamentoService {
         pagamento.setFormaPagamento("Cartão de Crédito");
         pagamento.setStatus("Aguardando Pagamento");
         pagamento.setIdUsuario(1);
-        pagamento.setDataPagamento(new Date());
+        pagamento.setDataPagamento(LocalDate.now());
         return pagamento;
     }
 
@@ -60,7 +60,7 @@ public class PagamentoService {
         return produtosList.add(produto);
     }
 
-    public Pagamento updateStatusPagamento(Long id, String status) {
+    public Pagamento uplocaldateStatusPagamento(Long id, String status) {
         Pagamento existingPagamento = this.getPagamentoById(id);
         if (existingPagamento != null) {
             if (!status.isEmpty()){

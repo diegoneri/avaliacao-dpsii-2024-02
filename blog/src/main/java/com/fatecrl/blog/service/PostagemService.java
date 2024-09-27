@@ -1,7 +1,7 @@
 package com.fatecrl.blog.service;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -86,7 +86,7 @@ public class PostagemService {
         postagem.setTitulo("Postagem Fake");
         postagem.setConteudo("Conteudo Fake");
         postagem.setAutor("Autor Fake");
-        postagem.setDataPublicacao(new Date());
+        postagem.setDataPublicacao(LocalDate.now());
         return postagem;
     }
 }
