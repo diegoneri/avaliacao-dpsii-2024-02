@@ -24,10 +24,10 @@ public class ProdutoController {
     }
 
     @GetMapping(params = "nome")
-    public ResponseEntity<Produto> getProdutoByNome(@RequestParam String nome) {
-        Produto produto = produtoService.getProdutoByNome(nome);
-        if (produto != null) {
-            return ResponseEntity.ok(produto);
+    public ResponseEntity<List<Produto>> getProdutoByNome(@RequestParam String nome) {
+        List<Produto> produtos = produtoService.getProdutoByNome(nome);
+        if (produtos.size() > 0) {
+            return ResponseEntity.ok(produtos);
         } else {
             return ResponseEntity.notFound().build();
         }

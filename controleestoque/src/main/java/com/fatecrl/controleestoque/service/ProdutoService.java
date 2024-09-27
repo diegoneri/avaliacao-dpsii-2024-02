@@ -10,8 +10,19 @@ import java.util.List;
 public class ProdutoService {
     private final List<Produto> produtosList;
 
+    private Produto produtoFake(){
+        Produto produto = new Produto();
+        produto.setId(1L);
+        produto.setNome("Produto Fake");
+        produto.setDescricao("Descrição do Produto Fake");
+        produto.setPreco(10.0);
+        produto.setQuantidade(10);
+        return produto;
+    }
+
     public ProdutoService(){
         produtosList = new ArrayList<>();
+        produtosList.add(produtoFake());
     }
 
     public List<Produto> getAllProdutos() {
@@ -26,11 +37,10 @@ public class ProdutoService {
     }      
     
 
-    public Produto getProdutoByNome(String nome) {
+    public List<Produto> getProdutoByNome(String nome) {
         return produtosList.stream()
                 .filter(produto -> produto.getNome().toLowerCase().contains(nome.toLowerCase()))
-                .findFirst()
-                .orElse(null);
+                .toList();
     }      
 
     public Produto getProdutoById(Long id) {
