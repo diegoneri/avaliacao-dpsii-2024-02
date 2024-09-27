@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: blog
+server:
+    servlet: 
+        contextPath: /api
+    port: 8092
