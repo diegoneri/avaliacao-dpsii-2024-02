@@ -80,7 +80,7 @@ public class PagamentoController {
 
     @PatchMapping("/{id}/status")
     public ResponseEntity<Pagamento> updateStatusPagamento(@PathVariable Long id, @RequestBody Pagamento produto) {
-        Pagamento updatedPagamento = pagamentoService.updateStatusPagamento(id, produto.getStatus());
+        Pagamento updatedPagamento = pagamentoService.uplocaldateStatusPagamento(id, produto.getStatus());
         if (updatedPagamento != null) {
             return ResponseEntity.ok(updatedPagamento);
         } else {
